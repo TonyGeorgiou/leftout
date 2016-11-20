@@ -1,0 +1,184 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* {
+  /*border: 1px solid green;*/
+}
+
+.left_container {
+  border: 1px solid red;
+  width: 80%;
+  display: inline-block;
+}
+
+.container {
+  border: 1px solid orange;
+  width: 100%;
+  height: 640px;
+}
+
+nav {
+  /*width: 780px;*/
+  height: 60px;
+}
+
+#logo {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  vertical-align: top;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 25px;
+  background-color: #008CC9;
+  color: white;
+
+}
+
+#home {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+  padding-left: 30px;
+}
+
+#profile {
+    display: inline-block;
+  width: 100px;
+  vertical-align: top;
+  padding-left: 30px;
+}
+
+.tagline {
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid black;
+  padding-left: 30px;
+}
+
+/* User section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   */
+.user {
+  border: 1px solid yellow;
+  display: inline-block;
+  width: 31%;
+  height: 640px;
+}
+
+.user_pic {
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 200px;
+  height: 280px;
+}
+
+/* This rule applies to the three central content containers:
+  - user
+  - artform
+  - work
+ */
+.container div{
+  vertical-align: top;
+  padding: 8px;
+
+}
+
+
+/* Artform details >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    */
+
+.arty {
+  border: 1px solid green;
+  display: inline-block;
+  width: 33%;
+  height: 640px;
+}
+
+.artform_pic {
+    margin: 0 auto;
+  border: 1px solid red;
+  /*width: 300px;*/
+  width: 33%;
+  height: 250px;
+
+}
+
+/* Work preferences  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    */
+
+.work {
+  border: 1px solid blue;
+  display: inline-block;
+  width: 30%;
+  height: 640px;
+}
+
+/*Vertical Scrolling sidebar  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+aside {
+  width: 20%;
+  height: 600px;
+  vertical-align: top;
+  display: inline-block;
+}
+.scroll {
+  border: 1px solid red;
+  width: 275px;
+  height: 754px;
+}
+
+.paragons {
+  /*margin: 0 auto;*/
+  border: 1px solid blue;
+  width: 270px;
+  height: 330px;
+}
+
+#paragon_photo {
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 150px;
+  height:  200px;
+}
+
+/*#artist_name {
+  border: 1px solid green;
+  width: 260px;
+  height: 30px;
+}
+
+#artist_vocation {
+  border: 1px solid yellow;
+  width: 260px;
+  height: 30px;
+}
+
+#artist_dayjob {
+  border: 1px solid red;
+  width: 260px;
+  height: 30px;
+}*/
+
+#picOne {
+    margin: 0 auto;
+}
+
+#exampleOne {
+    margin: 0 auto;
+}
+
+
+div{
+  /*border: 1px solid green !important;*/
+}
