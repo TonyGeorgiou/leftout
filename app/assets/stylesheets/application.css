@@ -36,13 +36,19 @@ nav {
   height: 60px;
 }
 
-#logo {
+.navitem{
   display: inline-block;
-  width: 100px;
-  height: 80px;
   vertical-align: top;
+  font-family: 'Varela Round', sans-serif;
+}
+
+#logo {
+  width: 100px;
+  height: 60px;
+  /*padding-top: 2px;*/
+  padding-bottom: 2px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 20px;
   border-radius: 25px;
   background-color: #008CC9;
   color: white;
@@ -50,24 +56,38 @@ nav {
 }
 
 #home {
-  display: inline-block;
   width: 100px;
-  vertical-align: top;
   padding-left: 30px;
 }
 
 #profile {
-    display: inline-block;
   width: 100px;
-  vertical-align: top;
   padding-left: 30px;
+}
+
+#sign_in {
+  width: 100px;
+  padding-left: 30px;
+}
+
+#sign_out {
+  width: 100px;
+  padding-left: 30px;
+}
+
+#search{
+  margin-top: 20px;
+  width: 300px;
+  padding-left: 80px;
 }
 
 .tagline {
   width: 100%;
+  padding-left: 230px;
   font-size: 12px;
   border: 1px solid black;
-  padding-left: 30px;
+  padding-left: 235px;
+  font-family: 'Pacifico', cursive;
 }
 
 /* User section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   */
@@ -83,6 +103,12 @@ nav {
   border: 1px solid red;
   width: 200px;
   height: 280px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.user_pic img {
+  height: 100%;
 }
 
 /* This rule applies to the three central content containers:
@@ -107,11 +133,12 @@ nav {
 }
 
 .artform_pic {
-    margin: 0 auto;
+  margin: 0 auto;
   border: 1px solid red;
   /*width: 300px;*/
-  width: 33%;
+  width: 66%;
   height: 250px;
+  border-radius: 20px;
 
 }
 
@@ -124,7 +151,8 @@ nav {
   height: 640px;
 }
 
-/*Vertical Scrolling sidebar  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* ASIDE with SCROLLER   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   */
 
 aside {
   width: 20%;
@@ -132,6 +160,7 @@ aside {
   vertical-align: top;
   display: inline-block;
 }
+
 .scroll {
   border: 1px solid red;
   width: 275px;
@@ -150,6 +179,7 @@ aside {
   border: 1px solid red;
   width: 150px;
   height:  200px;
+  border-radius: 20px;
 }
 
 /*#artist_name {
@@ -172,6 +202,7 @@ aside {
 
 #picOne {
     margin: 0 auto;
+    border-radius: 20px;
 }
 
 #exampleOne {

@@ -1,41 +1,65 @@
+<script type="text/javascript" src="searchbar.js"></script>
+<script type="text/javascript" src="slick_scroller.js"></script>
 
+<link href="https://fonts.googleapis.com/css?family=Verala+Round|Pacifico" rel="stylesheet">
 
 <div class="left_container">
 
   <nav>
-    <div id="logo">
+    <div id="logo" class="navitem">
       <h1>LeftOut</h1>
     </div>
-    <div id="home">
+
+    <div id="home" class="navitem">
       <h1>Home</h1>
     </div>
-    <div id="profile">
+
+    <div id="profile" class="navitem">
       <h1>Profile</h1>
     </div>
 
-    <!-- <p>So if you simply want a job to pay the rent whilst you follow your true calling, start here.</p> -->
+        <div id="sign_in" class="navitem">
+      <h1>Sign In</h1>
+    </div>
+
+        <div id="sign_in" class="navitem">
+      <h1>Sign Out</h1>
+    </div>
+
+    <div id="search" class="navitem">
+        <input type="text" id="navsearch" name="q"> <input type="submit" value="search">
+    </div>
+
   </nav>
 
   <div class="tagline">
     <h2>The place for creatives who prefer to kick out the corporate ladder rather than climb it.</h2>
+      <!-- <p>So if you simply want a job to pay the rent whilst you follow your true calling, start here.</p> -->
   </div>
 
   <div class="container">
 
 <!-- User details **************************************************************** -->
 
+<% @users.take(3).each do |user| %>
     <div class="user">
 
-      <div class="user_pic"></div>
+      <div class="user_pic">
+        <%= image_tag user.photo %>
+      </div>
 
-      <p>name</p>
-      <p>location</p>
-      <p>Following</p>
-      <p>Followers</p>
+      <p><%= user.name %></p>
+      <p><%= user.location %></p>
+
+      <button>Following</button>
+      <button>Followers</button>
+
+      <%= button_to 'Follow', follow_new_path(user.id) %>
+
       <p>Inmail</p>
 
     </div>
-
+<% end %>
 <!-- Artform details ************************************************************* -->
 
     <div class="arty">
@@ -73,6 +97,18 @@
 <!-- Scrolling side *************************************************************  -->
 
 <aside class="scroll">
+
+<!-- "Slick scroller"  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+<div class="container">
+<div class="hero__title" id="animatedHeading">
+  <div class="slick-dupe"><span class="hero__title-misc  |  animate">1</span></div>
+  <div class="slick-dupe"><span class="hero__title-misc  |  animate">2</span></div>
+  <div class="slick-dupe"><span class="hero__title-misc  |  animate">3</span></div>
+</div>
+</div>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+
 
   <div class="paragons">
 
