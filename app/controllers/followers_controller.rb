@@ -4,7 +4,7 @@ class FollowsController < ApplicationController
 
   def create
     follow = Follow.create :follower_id => @current_user.id, :followed_id => params[:id]
-    flash[:message] = 'You are now following this doodler.'
+    flash[:message] = 'You are now following this creative.'
     redirect_to user_path( params[:id] )
   end
 

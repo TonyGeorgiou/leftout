@@ -8,6 +8,42 @@
 </head>
 <body>
 
+<nav>
+    <div id="logo" class="navitem">
+      <h1>LeftOut</h1>
+    </div>
+
+    <div id="home" class="navitem">
+      <h1>Home</h1>
+    </div>
+
+    <div id="profile" class="navitem">
+      <h1>Profile</h1>
+    </div>
+
+  <div id="sign_in" class="navitem">
+    <h1><%= link_to "Sign Up", new_user_path %></h1>
+  </div>
+
+    <div id="sign_in" class="navitem">
+      <h1><%= link_to "Sign In", login_path %></h1>
+    </div>
+
+        <div id="sign_in" class="navitem">
+      <h1><%= link_to "Sign Out #{ @current_user.try(:name) }", login_path, :method => :delete %></h1>
+    </div>
+
+    <div id="search" class="navitem">
+        <input type="text" id="navsearch" name="q"> <input type="submit" value="search">
+    </div>
+
+  </nav>
+
+  <div class="tagline">
+    <h2>The place for creatives who prefer to kick out the corporate ladder rather than climb it.</h2>
+      <!-- <p>So if you simply want a job to pay the rent whilst you follow your true calling, start here.</p> -->
+  </div>
+
 <%= yield %>
 
 </body>

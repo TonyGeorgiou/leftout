@@ -5,37 +5,6 @@
 
 <div class="left_container">
 
-  <nav>
-    <div id="logo" class="navitem">
-      <h1>LeftOut</h1>
-    </div>
-
-    <div id="home" class="navitem">
-      <h1>Home</h1>
-    </div>
-
-    <div id="profile" class="navitem">
-      <h1>Profile</h1>
-    </div>
-
-        <div id="sign_in" class="navitem">
-      <h1>Sign In</h1>
-    </div>
-
-        <div id="sign_in" class="navitem">
-      <h1>Sign Out</h1>
-    </div>
-
-    <div id="search" class="navitem">
-        <input type="text" id="navsearch" name="q"> <input type="submit" value="search">
-    </div>
-
-  </nav>
-
-  <div class="tagline">
-    <h2>The place for creatives who prefer to kick out the corporate ladder rather than climb it.</h2>
-      <!-- <p>So if you simply want a job to pay the rent whilst you follow your true calling, start here.</p> -->
-  </div>
 
   <div class="container">
 
@@ -45,7 +14,7 @@
     <div class="user">
 
       <div class="user_pic">
-        <%= image_tag user.photo %>
+      <%= image_tag user.photo %>
       </div>
 
       <p><%= user.name %></p>
@@ -58,43 +27,55 @@
 
       <p>Inmail</p>
 
-    </div>
-<% end %>
-<!-- Artform details ************************************************************* -->
+      <!-- Artform details ************************************************************* -->
 
-    <div class="arty">
+      <div class="arty">
 
-      <h3>Artform:</h3>
+        <h3>Artform:</h3>
 
-      <div class="artform_pic"></div>
+        <% user.artforms.each do |artform| %>
+          <div class="artform_pic">
+            <%= image_tag artform.image %>
+          </div>
+        <% end %>
 
-      <h3>Bio/Comments</h3>
-      <div class="bio"></div>
+        <h3>Bio/Comments:</h3>
+        <div class="bio">
+          <%= user.artforms.first.bio if user.artforms.any? %>
+        </div>
 
-    </div>
+      </div>
 
 <!-- Work preferences ************************************************************** -->
 
-    <div class="work">
+      <div class="work">
 
-      <ul>
-        <li>Fulltime</li>
-        <li>Part time</li>
-        <li>Shift work</li>
-        <li>Weekend work</li>
-        <li>Contract</li>
-        <li>Any</li>
-      </ul>
+        <ul>
+          <li>Fulltime</li>
+          <li>Part time</li>
+          <li>Shift work</li>
+          <li>Weekend work</li>
+          <li>Contract</li>
+          <li>Any</li>
+        </ul>
 
-      <p>Preferences</p>
+        <h3>Preferences:</h3>
+        <div class="pref">
+          <form>
+            <textarea size="100"></textarea>
+          </form>
+        </div>
 
+      </div>
     </div>
+<% end %>
 
   </div>
 
 </div>
 
-<!-- Scrolling side *************************************************************  -->
+<!-- Scrolling side ********************************************************** -->
+<!-- ************************************************************************* -->
 
 <aside class="scroll">
 
@@ -118,7 +99,7 @@
     <div id="artist_vocation"></div>
     <div id="artist_dayjob"></div> -->
 
-    <div id="picOne"></div>
+    <div id="picOne"><%= image_tag 'charlesDickens.jpg' %></div>
     <div id="exampleOne">
       <h3>Charles Dickens</h3>
       <p>Vocation: Writer</p>
@@ -131,7 +112,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picTwo"></div>
+    <div id="picTwo"><%= image_tag 'clauper.jpg' %></div>
     <div id="exampleTwo">
       <h3>Cyndi Lauper</h3>
       <p>Vocation: Musician</p>
@@ -144,7 +125,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picThree"></div>
+    <div id="picThree"><%= image_tag 'paulGauguin2.jpg' %></div>
     <div id="exampleThree">
       <h3>Paul Gauguin</h3>
       <p>Vocation: Artist</p>
@@ -157,7 +138,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picFour"></div>
+    <div id="picFour"><%= image_tag 'stephenKing2.jpeg' %></div>
     <div id="exampleFour">
       <h3>Stephen King</h3>
       <p>Vocation: Writer</p>
@@ -170,7 +151,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picFive"></div>
+    <div id="picFive"><%= image_tag 'pGlass2.jpeg' %></div>
     <div id="exampleFive">
       <h3>Phillip Glass</h3>
       <p>Vocation: Musician</p>
@@ -182,7 +163,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picSix"></div>
+    <div id="picSix"><%= image_tag 'harperLee.jpg' %></div>
     <div id="exampleSix">
       <h3>Harper Lee</h3>
       <p>Vocation: Writer</p>
@@ -194,7 +175,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picSeven"></div>
+    <div id="picSeven"><%= image_tag 'williamFaulkner2.jpg' %></div>
     <div id="exampleSeven">
       <h3>William Faulkner</h3>
       <p>Vocation: Writer</p>
@@ -205,7 +186,7 @@
 
   <div class="paragons">
 
-    <div id="paragon_photo"></div>
+    <div id="paragon_photo"><%= image_tag 'mickjagger.jpeg' %></div>
 
     <div id="picEight"></div>
     <div id="exampleEight">
@@ -219,7 +200,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picNine"></div>
+    <div id="picNine"><%= image_tag 'jPollock.jpeg' %></div>
     <div id="exampleNine">
       <h3>Jackson Pollock</h3>
       <p>Vocation: Artist</p>
@@ -231,7 +212,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picTen"></div>
+    <div id="picTen"><%= image_tag 'agathaChristie.jpg' %></div>
     <div id="exampleTen">
       <h3>Agatha Christie</h3>
       <p>Vocation: Writer</p>
@@ -241,7 +222,7 @@
 
   <div class="paragons">
 
-    <div id="paragon_photo"></div>
+    <div id="paragon_photo"><%= image_tag 'jGrisham.jepg' %></div>
 
     <div id="picEleven"></div>
     <div id="exampleEleven">
@@ -255,7 +236,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picTwelve"></div>
+    <div id="picTwelve"><%= image_tag 'AiWeiwei.jpg' %></div>
     <div id="exampleTwelve">
       <h3>Ai Weiwei</h3>
       <p>Vocation: Artist</p>
@@ -265,7 +246,7 @@
 
   <div class="paragons">
 
-    <div id="paragon_photo"></div>
+    <div id="paragon_photo"><%= image_tag 'Vivian_Maier.jpg' %></div>
 
     <div id="picThirteen"></div>
     <div id="exampleThirteen">
@@ -277,7 +258,7 @@
 
   <div class="paragons">
 
-    <div id="paragon_photo"></div>
+    <div id="paragon_photo"><%= image_tag 'cBukowskii.jpg' %></div>
 
     <div id="picFourteen"></div>
     <div id="exampleFourteen">
@@ -291,7 +272,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picFifthteen"></div>
+    <div id="picFifthteen"><%= image_tag 'kCobain.jpeg' %></div>
     <div id="exampleFifthteen">
       <h3>Kurt Cobain</h3>
       <p>Vocation: Musician</p>
@@ -303,7 +284,7 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picSixteen"></div>
+    <div id="picSixteen"><%= image_tag 'georgeSaunders2.jpg' %></div>
     <div id="exampleSixteen">
       <h3>George Saunders</h3>
       <p>Vocation: Writer</p>
@@ -315,11 +296,21 @@
 
     <div id="paragon_photo"></div>
 
-    <div id="picSeventeen"></div>
+    <div id="picSeventeen"><%= image_tag 'nathaniel-hawthorne.jpg' %></div>
     <div id="exampleSeventeen">
       <h3>Nathaniel Hawthorne</h3>
       <p>Vocation: Writer</p>
       <p>Day job: Port clerk</p>
+    </div>
+  </div>
+
+      <div id="paragon_photo"></div>
+
+    <div id="picEighteen"><%= image_tag 'toniMorrison.jpg' %></div>
+    <div id="exampleSixteen">
+      <h3>Toni Morrison</h3>
+      <p>Vocation: Writer</p>
+      <p>Day job: Housewife</p>
     </div>
   </div>
 
