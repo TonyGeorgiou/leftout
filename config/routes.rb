@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/follow/:id' => 'follows#create', :as => 'follow_new'
   delete '/follow/:id' => 'follows#destroy', :as => 'follow_destroy'
 
+  get  '/profile/:id' => 'users#show', :as => 'profile'
+
   resources :users
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

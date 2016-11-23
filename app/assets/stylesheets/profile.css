@@ -1,0 +1,19 @@
+/* CSS rules for User Profile page */
+
+  /*h1 {
+    margin-left: 150px;
+  }
+
+  .form-group {
+    font-size: 1.1em
+    margin-left: 200px;
+    padding-bottom: 10px;
+  }*/
+
+  label{
+    display: inline-block;
+    /*text-align: right;*/
+    margin-left: 20px;
+    min-width: 150px !important;
+
+  }

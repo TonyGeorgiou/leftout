@@ -9,6 +9,12 @@
 <% end %>
 
 <%= form_for @user do |f| %>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, :required => true %>
+  </div>
+
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, :required => true %>
@@ -41,8 +47,36 @@
 
   <div class="form-group">
     <%= f.label :background %>
-    <%= f.text_field :background, :required => true %>
+    <%= f.text_area :background, :required => true %>
   </div>
+
+  <hr><div>
+  <h1>Work preferences</h1><br>
+  <%= f.label "Schedule" %><br>
+    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.label :work_wanted_type, "Full time" %>
+    <br>
+    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.label :work_wanted_type, "Part time" %>
+    <br>
+    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.label :work_wanted_type, "Shift work" %>
+    <br>
+    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.label :work_wanted_type, "Weekend work" %>
+    <br>
+    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.label :work_wanted_type, "Contract" %>
+    <br>
+    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.label :work_wanted_type, "Any" %>
+    <br>
+    <br>
+    <%= f.text_area :work_wanted_type, :required => true %>
+    <%= f.label :work_wanted_details, "Preferences" %>
+  </div>
+
+<br>
 
   <%= f.submit 'Sign up' %>
 <% end %>

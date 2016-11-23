@@ -14,24 +14,29 @@
     </div>
 
     <div id="home" class="navitem">
-      <h1>Home</h1>
+      <h1><h1><%= link_to "Home", "/" %></h1>
     </div>
 
+    <% if @current_user.present? %>
     <div id="profile" class="navitem">
-      <h1>Profile</h1>
-    </div>
+      <h1><%= link_to "Profile", profile_path(@current_user.id) %></h1>
+     </div>
 
-  <div id="sign_in" class="navitem">
-    <h1><%= link_to "Sign Up", new_user_path %></h1>
-  </div>
+     <div id="sign_out" class="navitem">
+      <h1><%= link_to "Sign Out #{ @current_user.try(:name) }", login_path, :method => :delete %></h1>
+    </div>
+    <% else %>
+
+    <div id="sign_up" class="navitem">
+      <h1><%= link_to "Sign Up", new_user_path %></h1>
+    </div>
 
     <div id="sign_in" class="navitem">
       <h1><%= link_to "Sign In", login_path %></h1>
     </div>
+    <% end %>
 
-        <div id="sign_in" class="navitem">
-      <h1><%= link_to "Sign Out #{ @current_user.try(:name) }", login_path, :method => :delete %></h1>
-    </div>
+
 
     <div id="search" class="navitem">
         <input type="text" id="navsearch" name="q"> <input type="submit" value="search">
