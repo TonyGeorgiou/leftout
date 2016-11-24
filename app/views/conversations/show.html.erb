@@ -1,0 +1,22 @@
+
+<div class="messageShow">
+<h2>Subject: <%= @conversation.subject %></h2>
+
+  <% @conversation.receipts_for(@current_user).each do |receipt| %>
+  <br>
+    <% message = receipt.message %>
+
+    <b><%= message.sender.name %></b>
+      says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %><br><br>
+    <i><%= message.body %></i>
+    <br>
+  <% end %>
+
+  <h2>Reply</h2>
+  <%= form_tag reply_conversation_path(@conversation), method: :post do %>
+  <div class="form-group">
+    <%= text_area_tag 'body', nil, cols: 3, class: 'form-control message', placeholder: 'Type something...', required: true %>
+  </div>
+  <%= submit_tag "Send Message", class: 'btn btn-primary' %>
+<% end %>
+</div>

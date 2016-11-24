@@ -20,18 +20,39 @@
 
 }
 
+.messageShow{
+  margin-left: 350px;
+  font-size: 1.2em;
+}
+
+textarea.message {
+  width: 300px;
+  height: 100px;
+}
+
+.error{
+  background-color: orange;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #FFF;
+}
+
+
 body {
   background-color: #c7c9c7;
 }
 
 .left_container {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 80%;
   display: inline-block;
 }
 
 .container {
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   width: 100%;
   height: 640px;
 }
@@ -91,15 +112,15 @@ nav {
   width: 100%;
   padding-left: 230px;
   font-size: 12px;
-  border: 1px solid black;
-  padding-left: 235px;
+  /*border: 1px solid black;*/
+  padding-left: 225px;
   font-size: 1.2em;
   font-family: 'Pacifico', cursive;
 }
 
 /* User section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   */
 .user {
-  border: 1px solid yellow;
+  /*border: 3px solid black;*/
   display: inline-block;
   width: 31%;
   height: 640px;
@@ -107,7 +128,7 @@ nav {
 
 .user_pic {
   margin: 0 auto;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 200px;
   /*height: 280px;*/
   overflow: hidden;
@@ -124,6 +145,13 @@ nav {
   - artform
   - work
  */
+
+ .bio textarea {
+  width: 300px;
+  height: 200px;
+  padding-bottom: 2  0px;
+}
+
 .container div {
   vertical-align: top;
   padding: 8px;
@@ -133,7 +161,7 @@ nav {
 /* Artform details >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    */
 
 .arty {
-  border: 1px solid green;
+  /*border: 3px solid black;*/
   /*display: inline-block;*/
   /*width: 33%;*/
   /*height: 640px;*/
@@ -141,7 +169,7 @@ nav {
 
 .artform_pic {
   margin: 0 auto;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   /*width: 300px;*/
   width: 66%;
   /*height: 250px;*/
@@ -156,7 +184,7 @@ nav {
 }
 
 
-.bio textarea {
+.comments textarea {
   width: 300px;
   height: 200px;
 }
@@ -164,7 +192,7 @@ nav {
 /* Work preferences  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    */
 
 .work {
-  border: 1px solid blue;
+  /*border: 3px solid black;*/
   /*display: inline-block;*/
   /*width: 30%;*/
   /*height: 640px;*/
@@ -186,22 +214,28 @@ aside {
 }
 
 .scroll {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 275px;
   height: 754px;
+  margin-top: 50px;
+}
+
+#scroll_header {
+  font-family: 'Pacifico', cursive;
 }
 
 .paragons {
   /*margin: 0 auto;*/
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   width: 270px;
   height: 330px;
 }
 
-#paragon_photo {
+#paragon_photo,
+.paragons img {
   margin: 0 auto;
-  border: 1px solid red;
-  width: 150px;
+  /*border: 1px solid red;*/
+  width: 150px!important;
   height:  200px;
   border-radius: 20px;
   overflow: hidden;
@@ -235,6 +269,16 @@ aside {
     margin: 0 auto;
 }
 
+.bgdiv{
+  margin-bottom: 4px;
+  background-color: #EEE;
+  border-radius: 10px;
+}
+
+#quote {
+  font-family: 'Pacifico', cursive;
+  margin-top: 15px;
+}
 
 div {
   /*border: 1px solid green !important;*/

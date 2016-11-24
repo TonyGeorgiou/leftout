@@ -22,9 +22,14 @@
       <h1><%= link_to "Profile", profile_path(@current_user.id) %></h1>
      </div>
 
+    <div id="nav_conversations" class="navitem">
+      <h1><%= link_to 'Your Conversations', conversations_path %></h1>
+    </div>
+
      <div id="sign_out" class="navitem">
       <h1><%= link_to "Sign Out #{ @current_user.try(:name) }", login_path, :method => :delete %></h1>
     </div>
+
     <% else %>
 
     <div id="sign_up" class="navitem">

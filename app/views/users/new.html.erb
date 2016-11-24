@@ -14,49 +14,51 @@
     <%= f.label :email %>
     <%= f.text_field :email, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :password %>
     <%= f.password_field :password, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :photo %>
     <%= f.url_field :photo, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :location %>
     <%= f.text_field :location, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :passion %>
     <%= f.text_field :passion, :required => true %>
   </div>
-
+<br>
   <div class="form-group">
     <%= f.label :background %>
     <%= f.text_area :background, :required => true %>
   </div>
 
-  <hr><div>
-  <h1>Work preferences</h1><br>
+  <div>
+  <h2>Work preferences</h2><br>
+  <% if false %>
+  THIS IS COMMENTED OUT
   <%= f.label "Schedule" %><br>
-    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.check_box "work_wanted_type", {}, "Full Time", multiple: true %>
     <%= f.label :work_wanted_type, "Full time" %>
     <br>
-    <%= f.check_box :work_wanted_type, :required => false %>
+    <%= f.check_box "work_wanted_type", {}, "Part Time", multiple: true %>
     <%= f.label :work_wanted_type, "Part time" %>
     <br>
     <%= f.check_box :work_wanted_type, :required => false %>
@@ -72,11 +74,24 @@
     <%= f.label :work_wanted_type, "Any" %>
     <br>
     <br>
-    <%= f.text_area :work_wanted_type, :required => true %>
+
+  <br><br>
     <%= f.label :work_wanted_details, "Preferences" %>
+    <%= f.text_area :work_wanted_details, :required => true %>
   </div>
+
+    END COMMENT
+<% end %>
+
+<div class="form-group">
+  <%= f.label "Type of Work Wanted"  %>
+  <%= f.text_area :work_wanted_type%>
+</div>
 
 <br>
 
+<div id="sign_up">
   <%= f.submit 'Sign up' %>
+</div>
+
 <% end %>

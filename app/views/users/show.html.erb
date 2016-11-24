@@ -1,1 +1,31 @@
-<%= @user.name %> Profile page
+
+
+<div class="centercol">
+  <div class="arty">
+
+  <h3>Name:</h3>
+    <%= @user.name %>
+
+  <h3>Artform:</h3>
+    <p><%= @user.location %></p>
+
+        <h3>Artform:</h3>
+
+        <% @user.artforms.each do |artform| %>
+          <div class="artform_pic">
+            <%= image_tag artform.image %>
+          </div>
+        <% end %>
+
+        <h3>Bio/Comments:</h3>
+        <div class="bio">
+          <%= @user.artforms.first.bio if @user.artforms.any? %>
+        </div>
+
+  <hr>
+  <h1>Work preferences</h1>
+    <b>Work type:</b> <%= @user.work_wanted_type %><br>
+    <b>Work details:</b> <%= @user.work_wanted_details %>
+
+  </div>
+</div>
